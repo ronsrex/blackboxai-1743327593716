@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Fitness - Find Your Perfect Gym</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .video-overlay {
+            background: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Header/Navigation -->
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-lg z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-dumbbell text-2xl text-blue-600"></i>
+                <span class="text-xl font-bold text-gray-800">Elite Fitness</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="text-gray-800 hover:text-blue-600">Home</a>
+                <a href="#" class="text-gray-800 hover:text-blue-600">About Us</a>
+                <a href="#" class="text-gray-800 hover:text-blue-600">Gyms</a>
+                <a href="#" class="text-gray-800 hover:text-blue-600">Trainers</a>
+                <a href="#" class="text-gray-800 hover:text-blue-600">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="px-4 py-2 text-gray-800 hover:text-blue-600">Login</button>
+                <button class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">
+                    Sign Up
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Video Background -->
+    <section class="relative h-screen">
+        <video autoplay muted loop class="w-full h-full object-cover">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-woman-doing-squats-with-a-barbell-15803-large.mp4" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 video-overlay flex items-center justify-center">
+            <div class="text-center px-4 max-w-4xl">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                    Find the Best Gym in Your Area
+                </h1>
+                <p class="text-xl text-white mb-8">
+                    All Your Fitness Needs Solved in One Click!
+                </p>
+                <div class="relative max-w-xl mx-auto">
+                    <input type="text" placeholder="Search by location..." 
+                        class="w-full px-6 py-4 rounded-full shadow-lg focus:outline-none">
+                    <button class="absolute right-2 top-2 bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition">
+                        Search
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto px-4 py-16">
+        <div class="flex flex-col md:flex-row gap-8">
+            <!-- Left Sidebar - Filters -->
+            <aside class="w-full md:w-1/4 bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-bold mb-6 text-gray-800">Filter Gyms</h2>
+                
+                <!-- Price Range Filter -->
+                <div class="mb-8">
+                    <h3 class="font-semibold mb-4 text-gray-700">Price Range</h3>
+                    <input type="range" min="100" max="10000" value="5000" 
+                        class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+                    <div class="flex justify-between mt-2 text-sm text-gray-600">
+                        <span>$100</span>
+                        <span>$10,000</span>
+                    </div>
+                </div>
+
+                <!-- Facility Tier -->
+                <div class="mb-8">
+                    <h3 class="font-semibold mb-4 text-gray-700">Facility Tier</h3>
+                    <div class="space-y-2">
+                        <label class="flex items-center">
+                            <input type="checkbox" class="form-checkbox h-4 w-4 text-blue-600">
+                            <span class="ml-2 text-gray-700">Low Tier</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="form-checkbox h-4 w-4 text-blue-600" checked>
+                            <span class="ml-2 text-gray-700">Middle Tier</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="form-checkbox h-4 w-4 text-blue-600">
+                            <span class="ml-2 text-gray-700">High Tier</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Gym Features -->
+                <div class="mb-8">
+                    <h3 class="font-semibold mb-4 text-gray-700">Gym Features</h3>
+                    <div class="space-y-2">
+                        <label class="flex items-center">
+                            <input type="checkbox" class="form-checkbox h-4 w-4 text-blue-600">
+                            <span class="ml-2 text-gray-700">Cardio</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="form-checkbox h-4 w-4 text-blue-600">
+                            <span class="ml-2 text-gray-700">Steam Room</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="form-checkbox h-4 w-4 text-blue-600">
+                            <span class="ml-2 text-gray-700">Weight Loss Programs</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Parking Availability -->
+                <div>
+                    <h3 class="font-semibold mb-4 text-gray-700">Parking</h3>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox h-4 w-4 text-blue-600">
+                        <span class="ml-2 text-gray-700">Available</span>
+                    </label>
+                </div>
+            </aside>
+
+            <!-- Right Content - Gym Listings -->
+            <div class="w-full md:w-3/4">
+                <h2 class="text-2xl font-bold mb-6 text-gray-800">Available Gyms</h2>
+                
+                <!-- Gym Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Gym Card 1 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                        <div class="relative h-48">
+                            <img src="https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg" 
+                                alt="Gym Interior" class="w-full h-full object-cover">
+                            <div class="absolute top-2 right-2 bg-white px-2 py-1 rounded-full text-xs font-semibold">
+                                0.5 mi away
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Elite Fitness Center</h3>
+                            <div class="flex items-center mb-4">
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">(128 reviews)</span>
+                            </div>
+                            <div class="mb-4">
+                                <div class="flex justify-between text-sm text-gray-600 mb-1">
+                                    <span>Per Day</span>
+                                    <span class="font-semibold">$50</span>
+                                </div>
+                                <div class="flex justify-between text-sm text-gray-600 mb-1">
+                                    <span>Per Month</span>
+                                    <span class="font-semibold">$300</span>
+                                </div>
+                                <div class="flex justify-between text-sm text-gray-600">
+                                    <span>Per Year</span>
+                                    <span class="font-semibold">$2,500</span>
+                                </div>
+                            </div>
+                            <button class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Gym Card 2 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                        <div class="relative h-48">
+                            <img src="https://images.pexels.com/photos/221247/pexels-photo-221247.jpeg" 
+                                alt="Gym Interior" class="w-full h-full object-cover">
+                            <div class="absolute top-2 right-2 bg-white px-2 py-1 rounded-full text-xs font-semibold">
+                                1.2 mi away
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Powerhouse Gym</h3>
+                            <div class="flex items-center mb-4">
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">(95 reviews)</span>
+                            </div>
+                            <div class="mb-4">
+                                <div class="flex justify-between text-sm text-gray-600 mb-1">
+                                    <span>Per Day</span>
+                                    <span class="font-semibold">$40</span>
+                                </div>
+                                <div class="flex justify-between text-sm text-gray-600 mb-1">
+                                    <span>Per Month</span>
+                                    <span class="font-semibold">$250</span>
+                                </div>
+                                <div class="flex justify-between text-sm text-gray-600">
+                                    <span>Per Year</span>
+                                    <span class="font-semibold">$2,000</span>
+                                </div>
+                            </div>
+                            <button class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Gym Card 3 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                        <div class="relative h-48">
+                            <img src="https://images.pexels.com/photos/1229356/pexels-photo-1229356.jpeg" 
+                                alt="Gym Interior" class="w-full h-full object-cover">
+                            <div class="absolute top-2 right-2 bg-white px-2 py-1 rounded-full text-xs font-semibold">
+                                0.8 mi away
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Iron Temple</h3>
+                            <div class="flex items-center mb-4">
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">(210 reviews)</span>
+                            </div>
+                            <div class="mb-4">
+                                <div class="flex justify-between text-sm text-gray-600 mb-1">
+                                    <span>Per Day</span>
+                                    <span class="font-semibold">$60</span>
+                                </div>
+                                <div class="flex justify-between text-sm text-gray-600 mb-1">
+                                    <span>Per Month</span>
+                                    <span class="font-semibold">$350</span>
+                                </div>
+                                <div class="flex justify-between text-sm text-gray-600">
+                                    <span>Per Year</span>
+                                    <span class="font-semibold">$3,000</span>
+                                </div>
+                            </div>
+                            <button class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Elite Fitness</h3>
+                    <p class="text-gray-400">
+                        Helping you find the perfect gym to achieve your fitness goals.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Gyms</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Trainers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">FAQs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Elite Fitness. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Static gym data
+        const gyms = [
+            {
+                id: 1,
+                name: "Elite Fitness Center",
+                pricePerDay: 50,
+                pricePerMonth: 300,
+                pricePerYear: 2500,
+                rating: 4.5,
+                reviews: 128,
+                distance: "0.5 mi",
+                image: "https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg",
+                features: ["Cardio", "Steam Room", "Weight Loss Programs"],
+                parking: true,
+                tier: "Middle"
+            },
+            {
+                id: 2,
+                name: "Powerhouse Gym",
+                pricePerDay: 40,
+                pricePerMonth: 250,
+                pricePerYear: 2000,
+                rating: 4.0,
+                reviews: 95,
+                distance: "1.2 mi",
+                image: "https://images.pexels.com/photos/221247/pexels-photo-221247.jpeg",
+                features: ["Cardio", "Weight Loss Programs"],
+                parking: false,
+                tier: "Low"
+            },
+            {
+                id: 3,
+                name: "Iron Temple",
+                pricePerDay: 60,
+                pricePerMonth: 350,
+                pricePerYear: 3000,
+                rating: 5.0,
+                reviews: 210,
+                distance: "0.8 mi",
+                image: "https://images.pexels.com/photos/1229356/pexels-photo-1229356.jpeg",
+                features: ["Cardio", "Steam Room", "Weight Loss Programs"],
+                parking: true,
+                tier: "High"
+            }
+        ];
+
+        // Filter functionality will be implemented here
+        document.addEventListener('DOMContentLoaded', function() {
+            // Search functionality
+            const searchInput = document.querySelector('input[type="text"]');
+            const searchButton = document.querySelector('button.bg-blue-600');
+            
+            searchButton.addEventListener('click', function() {
+                const searchTerm = searchInput.value.toLowerCase();
+                // Filter logic will be added here
+                console.log('Searching for:', searchTerm);
+            });
+
+            // Price range filter
+            const priceRange = document.querySelector('input[type="range"]');
+            priceRange.addEventListener('input', function() {
+                const priceValue = this.value;
+                console.log('Price range selected:', priceValue);
+            });
+        });
+    </script>
+</body>
+</html>
